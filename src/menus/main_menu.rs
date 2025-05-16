@@ -2,7 +2,7 @@ use crate::models::menu::{Menu, MenuItem};
 
 pub struct MainMenu {
     menu_items: Vec<MenuItem>,
-    title: String
+    title: String,
 }
 
 impl MainMenu {
@@ -16,7 +16,7 @@ impl MainMenu {
                 },
                 MenuItem {
                     name: "Envoyer argent".to_string(),
-                    menu: None
+                    menu: None,
                 },
                 MenuItem {
                     name: "Payment".to_string(),
@@ -24,7 +24,7 @@ impl MainMenu {
                 },
                 MenuItem {
                     name: "Retirer argent".to_string(),
-                    menu: None
+                    menu: None,
                 },
                 MenuItem {
                     name: "Banque".to_string(),
@@ -32,7 +32,7 @@ impl MainMenu {
                 },
                 MenuItem {
                     name: "Mon compte/Mot de passe".to_string(),
-                    menu: None
+                    menu: None,
                 },
                 MenuItem {
                     name: "Les Offres".to_string(),
@@ -40,12 +40,12 @@ impl MainMenu {
                 },
                 MenuItem {
                     name: "Services/Factures".to_string(),
-                    menu: None
-                }
-            ]
+                    menu: None,
+                },
+            ],
         }
     }
-    
+
     pub fn new_boxed() -> Box<Self> {
         Box::new(Self::new())
     }
@@ -55,9 +55,9 @@ impl Menu for MainMenu {
     fn items(&self) -> &[MenuItem] {
         &self.menu_items
     }
-     fn previous_menu(&self) -> Option<Box<dyn Menu>> {
-        None   
-     }
+    fn previous_menu(&self) -> Option<Box<dyn Menu>> {
+        None
+    }
 
     fn title(&self) -> &str {
         self.title.as_str()

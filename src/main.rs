@@ -11,6 +11,7 @@ fn main() {
     loop {
         clear_screen();
         current_menu.present_menu();
+        println!("--------------------------------------------");
         println!("Page précedent: 00");
         println!("Menu principale: **");
         println!("Quitter l'application: ##");
